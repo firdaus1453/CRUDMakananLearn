@@ -1,10 +1,13 @@
 package me.firdaus1453.crudmakanan.data.remote;
 
+import me.firdaus1453.crudmakanan.model.kategorimakanan.KategoriResponse;
 import me.firdaus1453.crudmakanan.model.login.LoginResponse;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 /**
  * Created by firdaus1453 on 2/28/2019.
@@ -42,4 +45,8 @@ public interface ApiInterface {
             @Field("jenkel") String jenkel,
             @Field("notelp") String notelp
     );
+
+    // Membuat get data Kategori makanan
+    @GET("getkategori.php")
+    Call<KategoriResponse> getKategori();
 }

@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         // Menmapilkan title
         getSupportActionBar().setTitle("Teams");
 
+        MakananFragment makananFragment = new MakananFragment();
+        loadFragment(makananFragment);
     }
 
     private void loadFragment(Fragment fragment) {
